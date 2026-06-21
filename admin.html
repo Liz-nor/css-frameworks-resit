@@ -4,62 +4,147 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <title>My Profile</title>
+    <link rel="icon" href="img/1.png" type="image/png">
 </head>
 
-<body>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="recipe.html">Create Recipe</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="login.html">Login</a></li>
-        </ul>
+<body class="background">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/1.png" alt="Logo" width="50" height="50">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link " href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="recipe.html">Create Recipe</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="admin.html">My Profile</a></li>
+                </ul>
+            </div>
+        </div>
     </nav>
     <main>
-        <div>
-            <h2>Chicken Alfredo</h2>
-            <button>Edit</button>
-            <button>Delete</button>
-        </div>
-        <div>
-            <h2>Spaghetti Bolognese</h2>
-            <button>Edit</button>
-            <button>Delete</button>
-        </div>
-        <div>
-            <h2>Beef Stroganoff</h2>
-            <button>Edit</button>
-            <button>Delete</button>
-        </div>
-        <div>
-            <h2>Chicken Parmesan</h2>
-            <button>Edit</button>
-            <button>Delete</button>
-        </div>
-        <div>
-            <h2>Vegetable Stir Fry</h2>
-            <button>Edit</button>
-            <button>Delete</button>
-        </div>
-        <div>
-            <h2>Chocolate Cake</h2>
-            <button>Edit</button>
-            <button>Delete</button>
-        </div>
-        <form>
-            <h2>Create a new recipe</h2>
-            <input type="text" minlength="3" placeholder="Author" required>
-            <input type="text" minlength="3" placeholder="Title" required>
-            <input type="file" accept="image/*" alt="Upload Image">
-            <textarea minlength="5" placeholder="Write a brief description of the dish" required></textarea>
-            <textarea minlength="10" placeholder="Write the recipe instructions here" required></textarea>
-            <button type="submit">Create</button>
+        <form class="container mt-5">
+            <div class="mb-3">
+                <h1 class="m-2">Create a new recipe</h1>
+                <input class="bg-light form-control m-2" type="text" minlength="3" placeholder="Author" required>
+                <input class="bg-light form-control m-2" type="text" minlength="3" placeholder="Title" required>
+                <input class="bg-light form-control m-2" type="file" accept="image/*" alt="Upload Image">
+            </div>
+            <div class="mb-3">
+                <textarea class="bg-light form-control m-2" minlength="5"
+                    placeholder="Write a brief description of the dish" required></textarea>
+                <textarea class="bg-light form-control m-2" minlength="10"
+                    placeholder="Fill in the ingredients here and press Add for each" required></textarea>
+                <button type="button" class="btn btn-secondary m-2">Add Ingredient</button>
+                <ul class="recipe-ingredients mt-2">
+                    <li>2 cups cooked chicken</li>
+                    <li>1 cup Alfredo sauce</li>
+                    <li>1/2 cup grated Parmesan cheese</li>
+                    <li>1/2 cup chopped parsley</li>
+                    <li>Salt and pepper to taste</li>
+                </ul>
+            </div>
+            <button type="submit" class="btn btn-primary mx-2">Create</button>
         </form>
+        <div class="container my-4">
+            <h2 class="mb-4">My Recipes</h2>
+            <div class="row row-cols-1 row-cols-md-5 g-4">
+                <div class="col">
+                    <div class="card h-100 d-flex flex-column">
+                        <h3 class="card-title p-3">Chicken Alfredo</h3>
+                        <div class="d-flex gap-4 mt-auto p-3">
+                            <button class="btn btn-primary">Edit</button>
+                            <button class="btn btn-danger">Delete</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 d-flex flex-column">
+                        <h3 class="card-title p-3">Vegetable Stir Fry</h3>
+                        <div class="d-flex gap-4 mt-auto p-3">
+                            <button class="btn btn-primary">Edit</button>
+                            <button class="btn btn-danger">Delete</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 d-flex flex-column">
+                        <h3 class="card-title p-3">Creamy Garlic Chicken Pasta</h3>
+                        <div class="d-flex gap-4 mt-auto p-3">
+                            <button class="btn btn-primary">Edit</button>
+                            <button class="btn btn-danger">Delete</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 d-flex flex-column">
+                        <h3 class="card-title p-3">Spicy Honey Glazed Salmon</h3>
+                        <div class="d-flex gap-4 mt-auto p-3">
+                            <button class="btn btn-primary">Edit</button>
+                            <button class="btn btn-danger">Delete</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 d-flex flex-column">
+                        <h3 class="card-title p-3">Rustic Tomato &amp; Basil Soup</h3>
+                        <div class="d-flex gap-4 mt-auto p-3">
+                            <button class="btn btn-primary">Edit</button>
+                            <button class="btn btn-danger">Delete</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 d-flex flex-column">
+                        <h3 class="card-title p-3">One-Pan Lemon Herb Chicken</h3>
+                        <div class="d-flex gap-4 mt-auto p-3">
+                            <button class="btn btn-primary">Edit</button>
+                            <button class="btn btn-danger">Delete</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 d-flex flex-column">
+                        <h3 class="card-title p-3">Chocolate Hazelnut Brownies</h3>
+                        <div class="d-flex gap-4 mt-auto p-3">
+                            <button class="btn btn-primary">Edit</button>
+                            <button class="btn btn-danger">Delete</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 d-flex flex-column">
+                        <h3 class="card-title p-3">Thai Coconut Vegetable Curry</h3>
+                        <div class="d-flex gap-4 mt-auto p-3">
+                            <button class="btn btn-primary">Edit</button>
+                            <button class="btn btn-danger">Delete</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 d-flex flex-column">
+                        <h3 class="card-title p-3">Chocolate Cake</h3>
+                        <div class="d-flex gap-4 mt-auto p-3">
+                            <button class="btn btn-primary">Edit</button>
+                            <button class="btn btn-danger">Delete</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </main>
-    <footer>
-        <p>&copy; 2024 Recipe App. All rights reserved.</p>
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <p class="mb-0">&copy; 2024 Recipe App. All rights reserved.</p>
     </footer>
 </body>
 

@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "build": "sass styles/styles.scss styles.css",
+    "watch": "sass --watch styles/styles.scss styles.css"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.8"
+  },
+  "devDependencies": {
+    "sass": "^1.101.0"
+  }
+}

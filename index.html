@@ -5,59 +5,211 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <title>Document</title>
+    <title>Dishly</title>
+    <link rel="icon" href="img/1.png" type="image/png">
 </head>
 
-<body>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="recipe.html">Create Recipe</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="login.html">Login</a></li>
-        </ul>
-    </nav>
-    <main>
-        <h1>Welcome to the Recipe App</h1>
-        <p>Discover and create delicious recipes!</p>
-        <dropdown>
-            <button>
-                Latest Recipes
+<body class="background">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/1.png" alt="Logo" width="50" height="50">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
             </button>
-            <ul>
-                <li><a>Appetizers</a></li>
-                <li><a>Main Courses</a></li>
-                <li><a>Desserts</a></li>
-            </ul>
-            <search>
-                <input type="text" placeholder="Search by title or author">
-                <button>Search</button>
-            </search>
-            <section>
-                <h2>Chicken Alfredo</h2>
-                <p>Posted by: John Doe</p>
-                <img src="./img/foodimg.jpg" alt="Chicken Alfredo">
-                <p>Posted at: January 1, 2024</p>
-            </section>
-            <section>
-                <h2>Vegetable Stir Fry</h2>
-                <p>Posted by: Jane Smith</p>
-                <img src="./img/foodimg.jpg" alt="Vegetable Stir Fry">
-                <p>Posted at: February 15, 2024</p>
-            </section>
-            <section>
-                <h2>Chocolate Cake</h2>
-                <p>Posted by: Mary Johnson</p>
-                <img src="./img/foodimg.jpg" alt="Chocolate Cake">
-                <p>Posted at: March 10, 2024</p>
-            </section>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="recipe.html">Create Recipe</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+                    <li class="nav-item"><a class="nav-link" href="admin.html">My Profile</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container my-4">
+        <div class="mb-4 hero-section">
+            <h1 class="mb-4 text-center hero-font">Welcome to Dishly</h1>
+            <p class="lead mb-4 text-center">Discover and create delicious recipes! Here at Dishly, we bring you the
+                best culinary
+                experiences.</p>
+        </div>
+        <div class="d-flex flex-wrap gap-3 mb-4">
+            <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Sort by date
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Newest</a></li>
+                    <li><a class="dropdown-item" href="#">Oldest</a></li>
+                </ul>
+            </div>
+
+            <div class="input-group" style="max-width: 400px;">
+                <input type="text" class="form-control" placeholder="Search by title or author">
+                <button class="btn btn-secondary" type="button">Search</button>
+            </div>
+        </div>
+
+        <div class="row row-cols-1 row-cols-md-3 justify-content-center g-4">
+            <div class="col">
+                <div class="card h-100" onclick="window.location.href='recipe.html'">
+                    <div class="position-relative">
+                        <img src="./img/cardimg.jpg" class="card-img-top" alt="Chicken Alfredo">
+                        <span class="badge bg-secondary card-badge">Italian</span>
+                    </div>
+                    <div class="card-body pt-4">
+                        <h2 class="card-title h5">Chicken Alfredo</h2>
+                        <p class="card-text text-muted small mb-0">Posted by: <strong>John Doe</strong> - January 1,
+                            2024</p>
+                        <div class="d-flex justify-content-end mt-3">
+                            <button class="btn btn-sm btn-outline-primary">View Recipe</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100" onclick="window.location.href='recipe.html'">
+                    <div class="position-relative">
+                        <img src="./img/cardimg.jpg" class="card-img-top" alt="Vegetable Stir Fry">
+                        <span class="badge bg-secondary card-badge">Vegetarian</span>
+                    </div>
+                    <div class="card-body pt-4">
+                        <h2 class="card-title h5">Vegetable Stir Fry</h2>
+                        <p class="card-text text-muted small mb-0">Posted by: <strong>Jane Smith</strong> - February 15,
+                            2024</p>
+                        <div class="d-flex justify-content-end mt-3">
+                            <button class="btn btn-sm btn-outline-primary">View Recipe</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100" onclick="window.location.href='recipe.html'">
+                    <div class="position-relative">
+                        <img src="./img/cardimg.jpg" class="card-img-top" alt="Creamy Garlic Chicken Pasta">
+                        <span class="badge bg-secondary card-badge">Italian</span>
+                    </div>
+                    <div class="card-body pt-4">
+                        <h2 class="card-title h5">Creamy Garlic Chicken Pasta</h2>
+                        <p class="card-text text-muted small mb-0">Posted by: <strong>Emma Hart</strong> - March 10,
+                            2025</p>
+                        <div class="d-flex justify-content-end mt-3">
+                            <button class="btn btn-sm btn-outline-primary">View Recipe</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100" onclick="window.location.href='recipe.html'">
+                    <div class="position-relative">
+                        <img src="./img/cardimg.jpg" class="card-img-top" alt="Spicy Honey Glazed Salmon">
+                        <span class="badge bg-secondary card-badge">Seafood</span>
+                    </div>
+                    <div class="card-body pt-4">
+                        <h2 class="card-title h5">Spicy Honey Glazed Salmon</h2>
+                        <p class="card-text text-muted small mb-0">Posted by: <strong>Noah Bennet</strong> - December
+                            21, 2025</p>
+                        <div class="d-flex justify-content-end mt-3">
+                            <button class="btn btn-sm btn-outline-primary">View Recipe</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100" onclick="window.location.href='recipe.html'">
+                    <div class="position-relative">
+                        <img src="./img/cardimg.jpg" class="card-img-top" alt="Rustic Tomato & Basil Soup">
+                        <span class="badge bg-secondary card-badge">Vegetarian</span>
+                    </div>
+                    <div class="card-body pt-4">
+                        <h2 class="card-title h5">Rustic Tomato & Basil Soup</h2>
+                        <p class="card-text text-muted small mb-0">Posted by: <strong>Sophie Carter</strong> - January
+                            10, 2024</p>
+                        <div class="d-flex justify-content-end mt-3">
+                            <button class="btn btn-sm btn-outline-primary">View Recipe</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100" onclick="window.location.href='recipe.html'">
+                    <div class="position-relative">
+                        <img src="./img/cardimg.jpg" class="card-img-top" alt="One-Pan Lemon Herb Chicken">
+                        <span class="badge bg-secondary card-badge">Italian</span>
+                    </div>
+                    <div class="card-body pt-4">
+                        <h2 class="card-title h5">One-Pan Lemon Herb Chicken</h2>
+                        <p class="card-text text-muted small mb-0">Posted by: <strong>Liam Foster</strong> - September
+                            15, 2024</p>
+                        <div class="d-flex justify-content-end mt-3">
+                            <button class="btn btn-sm btn-outline-primary">View Recipe</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100" onclick="window.location.href='recipe.html'">
+                    <div class="position-relative">
+                        <img src="./img/cardimg.jpg" class="card-img-top" alt="Chocolate Hazelnut Brownies">
+                        <span class="badge bg-secondary card-badge">Dessert</span>
+                    </div>
+                    <div class="card-body pt-4">
+                        <h2 class="card-title h5">Chocolate Hazelnut Brownies</h2>
+                        <p class="card-text text-muted small mb-0">Posted by: <strong>Olivia Brooks</strong> - June 26,
+                            2024</p>
+                        <div class="d-flex justify-content-end mt-3">
+                            <button class="btn btn-sm btn-outline-primary">View Recipe</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100" onclick="window.location.href='recipe.html'">
+                    <div class="position-relative">
+                        <img src="./img/cardimg.jpg" class="card-img-top" alt="Thai Coconut Vegetable Curry">
+                        <span class="badge bg-secondary card-badge">Vegetarian</span>
+                    </div>
+                    <div class="card-body pt-4">
+                        <h2 class="card-title h5">Thai Coconut Vegetable Curry</h2>
+                        <p class="card-text text-muted small mb-0">Posted by: <strong>William Turner</strong> - April 5,
+                            2024</p>
+                        <div class="d-flex justify-content-end mt-3">
+                            <button class="btn btn-sm btn-outline-primary">View Recipe</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100" onclick="window.location.href='recipe.html'">
+                    <div class="position-relative">
+                        <img src="./img/cardimg.jpg" class="card-img-top" alt="Chocolate Cake">
+                        <span class="badge bg-secondary card-badge">Dessert</span>
+                    </div>
+                    <div class="card-body pt-4">
+                        <h2 class="card-title h5">Chocolate Cake</h2>
+                        <p class="card-text text-muted small mb-0">Posted by: <strong>Mary Johnson</strong> - March 3,
+                            2024</p>
+                        <div class="d-flex justify-content-end mt-3">
+                            <button class="btn btn-sm btn-outline-primary">View Recipe</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
-    <footer>
-        <p>&copy; 2024 Recipe App. All rights reserved.</p>
+
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <p class="mb-0">&copy; 2024 Recipe App. All rights reserved.</p>
     </footer>
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
